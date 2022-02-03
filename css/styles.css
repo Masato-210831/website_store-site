@@ -1,0 +1,276 @@
+body {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+header .main-log a {
+  display: block;
+  width: 180px;
+}
+
+header #nav {
+  position: fixed;
+  top: 50px;
+  left: -300px;
+  z-index: 20;
+}
+
+header #nav .menu-list {
+  margin: 0 40px;
+  list-style-type: none;
+}
+
+header #nav .menu-list li {
+  margin-bottom: 40px;
+}
+
+header #nav .menu-list li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+header .btn-list {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .btn-list .menu-btn {
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 11;
+}
+
+header .btn-list .menu-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  -webkit-transition: all .8s;
+  transition: all .8s;
+}
+
+header .btn-list .menu-btn span:nth-child(2) {
+  margin-top: 10px;
+}
+
+header .btn-list .sidebar-btn .material-icons {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+header .btn-list .sidebar-btn .material-icons.open {
+  background: #9f9f9ff7;
+  border-radius: 5px;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header #mask {
+  display: none;
+}
+
+.open #nav {
+  top: 80px;
+  left: 0px;
+}
+
+.open #mask {
+  display: block;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.open .menu-btn span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);
+          transform: translateY(4px) rotate(-45deg);
+}
+
+.open .menu-btn span:nth-child(2) {
+  -webkit-transform: translateY(-8px) rotate(45deg);
+          transform: translateY(-8px) rotate(45deg);
+}
+
+main #top-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 140px;
+}
+
+main #sidebar {
+  position: fixed;
+  left: -200px;
+  top: 0px;
+  bottom: 0;
+  width: 200px;
+  background-color: #a7a4a4;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: 50;
+}
+
+main #sidebar li {
+  list-style: none;
+  margin: 40px 0 30px 30px;
+}
+
+main #sidebar li a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+main .open .overlay {
+  background: #000;
+  opacity: 0.2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 20;
+}
+
+main .commodity-list {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .commodity-list ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 30px;
+}
+
+main .commodity-list ul li {
+  list-style: none;
+}
+
+main .commodity-list ul li:hover {
+  border: 1px solid #797979;
+  background-color: #efefef;
+}
+
+main .commodity-list ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+main .commodity-list ul li a img {
+  margin-bottom: 10px;
+}
+
+main .commodity-list ul li a p {
+  padding-left: 2px;
+}
+
+main .commodity-list ul li a p:last-child {
+  margin-bottom: 10px;
+}
+
+main .commodity-list .more {
+  position: relative;
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2em;
+}
+
+main .commodity-list .more:hover::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 1px;
+  bottom: 0;
+  background-color: #000;
+}
+
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+#footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+#footer .links li {
+  margin-right: 30px;
+}
+
+#footer .links li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+#footer .links li a:hover {
+  border-bottom: 1px solid #000;
+}
+
+#footer .copyright {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=styles.css.map */

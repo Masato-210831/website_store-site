@@ -1,0 +1,286 @@
+body {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+// ----------------------------------------
+// header
+// -----------------------------------------
+header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  // ロゴ
+  .main-log {
+    a {
+      display: block;
+      width: 180px;
+    }
+  }
+
+  // ナビメニュ−
+  #nav {
+    position: fixed;
+    top: 50px;
+    left: -300px;
+    z-index: 20;
+
+
+    .menu-list {
+      margin: 0 40px;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 40px;
+
+        a {
+          font-weight: bold;
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .btn-list {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    // メニューボタン
+    .menu-btn {
+      padding-top: 5px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 11;
+  
+      span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: #000;
+        transition: all .8s;
+      }
+
+      span:nth-child(2) {
+        margin-top: 10px;
+      }
+  }
+
+  .sidebar-btn .material-icons {
+    font-size: 40px;
+    cursor: pointer;
+
+    &.open {
+      background: #9f9f9ff7;
+      border-radius: 5px;
+      color: #fff;
+      transition: .3s;
+    }
+  }
+
+  }
+
+  #mask {
+    display: none;
+  }
+
+}
+
+// ------------------------------------------
+// メニューバー開いた時の挙動
+// ------------------------------------------
+.open {
+  #nav {
+    top: 80px;
+    left: 0px;
+  }
+
+  #mask {
+    display: block;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .menu-btn span {
+
+    &:nth-child(1) {
+      transform: translateY(4px) rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      transform: translateY(-8px) rotate(45deg);
+    }
+  }
+
+}
+
+// ----------------------------------------------
+// main
+// ----------------------------------------------
+
+main {
+  
+  #top-menu {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
+
+  // 隠しサイドバー 
+  #sidebar {
+    position:fixed;
+    left: -200px;
+    top: 0px;
+    bottom: 0;
+    width: 200px;
+    background-color: rgb(167, 164, 164);
+    transition: all .3s;
+    z-index: 50;
+    
+    li {
+      list-style: none;
+      margin: 40px 0 30px 30px;
+      
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+  
+  .open .overlay {
+      background: #000;
+      opacity: 0.2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+
+  // 商品リスト
+  .commodity-list {
+    width: 100%;
+    margin: 0 auto;
+   
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      column-gap: 30px;
+      row-gap: 30px;
+
+      li {
+        list-style: none;
+
+        &:hover {
+          // opacity: 0.8;
+          border: 1px solid rgb(121, 121, 121);
+          background-color: #efefef;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
+
+          img {
+            margin-bottom: 10px;
+          }
+
+          p {
+            padding-left: 2px;
+
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .more {
+      position: relative;
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.2em;
+
+      &:hover {
+        
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100px;
+          height: 1px;
+          bottom: 0;
+          background-color: #000;
+        }
+      }
+        
+    }
+  }
+}
+
+// -----------------------------------
+// footer
+// ----------------------------------
+#footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+
+  .links {
+    display: flex;
+    list-style-type: none;
+
+    li {
+      margin-right: 30px;
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: #000;
+
+        &:hover {
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
