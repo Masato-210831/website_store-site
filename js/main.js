@@ -35,11 +35,13 @@
       sideBar.style.left = '-200px';
       sideBar.classList.remove('open');
       sideBarBtn.classList.remove('open');
+      overlay.style.display = 'none';
     } else {
       sideBar.classList.add('open');
       sideBarBtn.classList.add('open');
       sideBar.style.opacity = 1;
       sideBar.style.left = 0;
+      overlay.style.display = 'block';
     }
 
     overlay.addEventListener('click', () => {
@@ -47,6 +49,7 @@
       sideBar.style.left = '-200px';
       sideBar.classList.remove('open');
       sideBarBtn.classList.remove('open');
+      overlay.style.display = 'none';
     })
   });
 

@@ -135,11 +135,22 @@ header #mask {
 }
 
 main #top-menu {
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+
+main #top-menu .page-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+main #top-menu .top-menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 80px;
-  margin-bottom: 140px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .overlay {
@@ -161,7 +172,7 @@ main #sidebar {
   top: 0px;
   bottom: 0;
   width: 200px;
-  background-color: #525151;
+  background-color: #747272;
   -webkit-transition: all .3s;
   transition: all .3s;
   z-index: 50;
@@ -178,75 +189,12 @@ main #sidebar li a {
   color: #fff;
 }
 
-main .commodity-list {
-  width: 100%;
-  margin: 0 auto;
+main .about-container {
+  width: 600px;
 }
 
-main .commodity-list ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-  row-gap: 30px;
-}
-
-@media (max-width: 900px) {
-  main .commodity-list ul {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 40px;
-            column-gap: 40px;
-  }
-}
-
-main .commodity-list ul li {
-  list-style: none;
-}
-
-main .commodity-list ul li:hover {
-  border: 1px solid #797979;
-  background-color: #efefef;
-}
-
-main .commodity-list ul li a {
-  text-decoration: none;
-  color: #000;
-}
-
-main .commodity-list ul li a img {
-  margin-bottom: 10px;
-}
-
-main .commodity-list ul li a p {
-  padding-left: 2px;
-}
-
-main .commodity-list ul li a p:last-child {
-  margin-bottom: 10px;
-}
-
-main .commodity-list .more {
-  position: relative;
-  display: block;
-  margin-top: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 1.2em;
-}
-
-main .commodity-list .more:hover::before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 1px;
-  bottom: 0;
-  background-color: #000;
+main .about-container p {
+  margin-bottom: 30px;
 }
 
 #footer {
@@ -256,7 +204,10 @@ main .commodity-list .more:hover::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
 }
 
 @media (max-width: 900px) {
@@ -292,4 +243,4 @@ main .commodity-list .more:hover::before {
 #footer .copyright {
   font-size: 0.8rem;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=about.css.map */

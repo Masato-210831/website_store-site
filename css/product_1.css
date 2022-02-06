@@ -135,11 +135,20 @@ header #mask {
 }
 
 main #top-menu {
+  margin-top: 120px;
+  margin-bottom: 140px;
+}
+
+main #top-menu .page-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+main #top-menu .top-menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 80px;
-  margin-bottom: 140px;
 }
 
 main .overlay {
@@ -161,7 +170,7 @@ main #sidebar {
   top: 0px;
   bottom: 0;
   width: 200px;
-  background-color: #525151;
+  background-color: #747272;
   -webkit-transition: all .3s;
   transition: all .3s;
   z-index: 50;
@@ -183,7 +192,7 @@ main .commodity-list {
   margin: 0 auto;
 }
 
-main .commodity-list ul {
+main .commodity-list .list-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -196,7 +205,7 @@ main .commodity-list ul {
 }
 
 @media (max-width: 900px) {
-  main .commodity-list ul {
+  main .commodity-list .list-grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 40px;
@@ -204,49 +213,61 @@ main .commodity-list ul {
   }
 }
 
-main .commodity-list ul li {
+main .commodity-list .list-grid li {
   list-style: none;
 }
 
-main .commodity-list ul li:hover {
+main .commodity-list .list-grid li:hover {
   border: 1px solid #797979;
   background-color: #efefef;
 }
 
-main .commodity-list ul li a {
+main .commodity-list .list-grid li a {
   text-decoration: none;
   color: #000;
 }
 
-main .commodity-list ul li a img {
+main .commodity-list .list-grid li a img {
   margin-bottom: 10px;
 }
 
-main .commodity-list ul li a p {
+main .commodity-list .list-grid li a p {
   padding-left: 2px;
 }
 
-main .commodity-list ul li a p:last-child {
+main .commodity-list .list-grid li a p:last-child {
   margin-bottom: 10px;
 }
 
-main .commodity-list .more {
-  position: relative;
-  display: block;
-  margin-top: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-size: 1.2em;
+main .commodity-list .page-nav {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .commodity-list .more:hover::before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 1px;
-  bottom: 0;
-  background-color: #000;
+main .commodity-list .page-nav li {
+  list-style: none;
+  margin: 0 20px;
+  padding: 0 5px;
+}
+
+main .commodity-list .page-nav li:nth-child(1) {
+  color: #c6c6c6;
+  font-weight: normal;
+  border-bottom: none;
+}
+
+main .commodity-list .page-nav li:not(:nth-child(1)):hover {
+  border-bottom: 1px solid #000;
+}
+
+main .commodity-list .page-nav li a {
+  text-decoration: none;
+  color: #000;
 }
 
 #footer {
@@ -292,4 +313,4 @@ main .commodity-list .more:hover::before {
 #footer .copyright {
   font-size: 0.8rem;
 }
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=product_1.css.map */

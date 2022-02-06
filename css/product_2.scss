@@ -146,10 +146,21 @@ header {
 main {
   
   #top-menu {
-    display: flex;
-    margin-top: 80px;
+    margin-top: 120px;
     margin-bottom: 140px;
+
+    .page-title {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    .top-menu-container {
+      display: flex;
+    }
   }
+
+  
 
   // 隠しサイドバー
   .overlay {
@@ -171,7 +182,7 @@ main {
     top: 0px;
     bottom: 0;
     width: 200px;
-    background-color: #525151;
+    background-color: #747272;
     transition: all .3s;
     z-index: 50;
     
@@ -192,16 +203,16 @@ main {
     width: 100%;
     margin: 0 auto;
    
-    ul {
+    .list-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
       column-gap: 30px;
       row-gap: 30px;
 
-      @media (max-width:900px) {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 40px;
+      @media(max-width:900px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
       }
 
       li {
@@ -232,29 +243,34 @@ main {
       }
     }
 
-    .more {
-      position: relative;
-      display: block;
-      margin-top: 30px;
-      text-align: center;
-      text-decoration: none;
-      color: #000;
-      font-size: 1.2em;
+    .page-nav {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
 
-      &:hover {
-        
-        &::before {
-          position: absolute;
-          content: "";
-          width: 100px;
-          height: 1px;
-          bottom: 0;
-          background-color: #000;
+      li {
+        list-style: none;
+        margin: 0 20px;
+        padding: 0 5px;
+        // font-weight: bold;
+
+        &:nth-child(2) {
+          color: #c6c6c6;
+          font-weight: normal;
+          border-bottom: none;
+        }
+
+        &:not(:nth-child(2)):hover {
+          border-bottom: 1px solid #000;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
         }
       }
-        
+      }
     }
-  }
 }
 
 // -----------------------------------
